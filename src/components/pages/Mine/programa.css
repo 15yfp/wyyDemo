@@ -1,0 +1,33 @@
+.programa{
+    margin:5px 0;
+    width: 100%;
+    height: 214px;
+    background: #fff;
+}
+.programaItem{
+    width:100%;
+    height: 43px;
+    line-height: 43px;
+}
+.proaramaItemsp,.proaramaItems{
+    float: left;
+}
+.proaramaItemsp span{
+    margin-left: 10px;
+    display:block;
+    text-align: center;
+    line-height: 43px;
+    font-size: 20px;
+    width:43px;
+    height: 43px;
+}
+.mymusic,.mypaly,.mydown,.myfm{
+    width:322px;
+    height: 42px;
+    border-bottom: 1px solid #ccc;   
+}
+.proaramaItems i{
+    font-size: 10px;
+    color:rgb(156, 154, 154);
+}
+

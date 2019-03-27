@@ -56,7 +56,7 @@ export default class MainContaier extends Component {
       </li>
     )
   }
-  
+
   render() {
     return (
       <div className="app-main">

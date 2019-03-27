@@ -1,0 +1,49 @@
+ .recplayed{
+    width: 375px;
+    min-height: 667px;
+    background: #fff;
+    position: fixed; 
+    top:0;
+    left: 0;
+    padding: 0 10px;
+    /* display:none; */
+}
+.recplayed-header{
+    padding: 10px 0px;
+    width: 355px;
+    height: 45px;
+    line-height: 25px;
+}
+.recplayed-title{
+    display: block;
+    height: 22px;
+    float: left;
+    font-size: 17px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+.recplayed-icon-left{
+    float: left;
+}
+.thissong-icon-search{
+    float: right;
+}
+.recplayed-list{
+    height: 30px;
+   border-bottom: 1px solid #ccc;
+}
+.recplayed-list li{
+    float: left;
+    
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+} 
+.thisLink{
+
+    display: inline-block;
+    padding: 0px 28px;
+    height: 29px;
+}
+
+

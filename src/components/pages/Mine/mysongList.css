@@ -1,0 +1,35 @@
+.songList{
+    min-height: 110px;
+    width:375px;
+    background:#fff;
+    padding: 10px;
+}
+.listHeader{
+    height: 25px;
+    line-height: 25px;
+    /* background:blueviolet; */
+}
+.listHeader .addlist{
+    display: block;
+    height: 22px;
+    width: 270px;
+    line-height: 22px; 
+}
+.listHeader span{ 
+    float: left;
+    display: block;
+}
+.listHeader span i{
+    font-size: 10px;
+    color:rgb(116, 112, 112);
+}
+.listAll{
+    margin-top:20px;
+    text-align: center;
+    line-height: 60px;
+    width: 353px;
+    height: 60px;
+    border:1px  dashed #ccc;
+    border-radius: 5px;
+}
+
