@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
-import { Tabs, WhiteSpace } from 'antd-mobile';
-import { Mine, Find, Friends, Video} from '../pages/index'
+import LazyLoad from 'react-lazyload'
+import { Mine, Find, Friends, Video, ModalCont} from '../pages/index'
 import './index.scss'
+import { NavLink } from "react-router-dom"
 export default class MainContaier extends Component {
   constructor(props){
     super(props)
@@ -14,7 +15,7 @@ export default class MainContaier extends Component {
               {id:4,title: "视频",cat:"video",com: <Video/>},
           ],
           type: "mine",
-          color: "#fff"
+          isShow: false
     }
   }
   renderItem(){
@@ -56,14 +57,24 @@ export default class MainContaier extends Component {
       </li>
     )
   }
+<<<<<<< HEAD
 
+=======
+  isModel(msg){
+      this.setState({
+         isShow: false
+      })
+  }
+>>>>>>> debbf6d07e8a227ac20d38ea2c7551a10f7a913b
   render() {
+    let { isShow } = this.state
     return (
       <div className="app-main">
-           <ul className="tobs">
-              <li></li>
-              { this.renderBar() }
-              <li></li>
+          <ul className="tobs">
+              <li className="list" onClick={()=>{this.setState({ isShow:true})}}></li>
+              <LazyLoad> { this.renderBar() } </LazyLoad>
+              <NavLink to= {{ pathname: '/search' }} ><li className="search"></li></NavLink>
+              {   isShow ? <ModalCont method={this.isModel.bind(this)}/> : null }
           </ul>
           { this.renderItem() }
       </div>
