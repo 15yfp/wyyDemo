@@ -1,0 +1,96 @@
+b{ color: #999;}
+.item{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: .21rem  0;
+    border-bottom: 1px solid #f3f3f3;
+    .item-img{
+        float: left;
+        margin-left: .14rem;
+        img{
+            width: .4rem;
+            height: .4rem;
+            border-radius: 50%;
+        }
+    }
+    ul.item-info{
+        position: relative;
+        float: left;
+        width: 100%;
+        margin:0 .14rem 0 .07rem;
+        .item-title{
+            margin-top: .04rem;
+            p span{ display:inline-block;margin-right: .04rem;color: #5a7db5;}
+            b{line-height: .32rem;}
+        }
+        .attention{
+            position: absolute;
+            top: .24rem;
+            right: 0;
+            padding: .04rem .14rem;
+            background: #ff3a3a;
+            color: #fff;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .item-center{
+            background: #f3f3f3;
+            margin: .2rem 0;
+        }
+        .item-play{
+            width: 100%;
+            overflow: hidden;
+            background: #f3f3f3;
+            padding-top: .02rem;
+            .item-play-button{
+                position: relative;
+                float: left;
+                img{
+                    width: .4rem;
+                    height: .4rem;
+                    margin: 0 .06rem;
+                    vertical-align: middle;
+                }
+                i{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right: 0; 
+                    bottom: 0;
+                    margin: auto;
+                    display: block;
+                    background: url("../../../assets/images/NEXT.png")no-repeat center center;
+                    background-size: .16rem .16rem;
+                    width: .26rem;
+                    height: .26rem;
+                    background-color: rgba(255,255,255,255);
+                    opacity: .7;
+                    border-radius: 50%;
+                }
+            }
+            .item-play-info{
+                float: left;
+            }
+        }
+        .item-operation{
+            line-height: .2rem;
+            color: #999;
+            margin-top: .16rem;
+            display: flex;
+            justify-content: space-between;
+            span{
+                display: inline-block;
+                margin-right: .3rem;
+            }
+            img{ width: .2rem;height: .2rem; vertical-align: middle;margin-right: .04rem;}
+            i{
+                display: block;
+                background: url("../../../assets//images/more.png")no-repeat center;
+                width: .08rem;
+                background-size: .08rem .14rem;
+                margin-right: .02rem;
+            }
+        }
+    }
+}

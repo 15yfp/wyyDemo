@@ -1,7 +1,16 @@
-function font(){
-    document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px'
-}
-
-font()
-
-window.onresize = font
+(function (doc, win) {
+    // eslint-disable-next-line one-var
+    var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function () {
+        var clientWidth = docEl.clientWidth
+        if (clientWidth >= 375) {
+          clientWidth = 375
+        }
+        if (!clientWidth) return
+        docEl.style.fontSize = 100 * (clientWidth / 375) + 'px'
+      }
+    if (!doc.addEventListener) return
+    win.addEventListener(resizeEvt, recalc, false)
+    doc.addEventListener('DOMContentLoaded', recalc, false)
+  })(document, window)

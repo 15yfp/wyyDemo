@@ -1,3 +1,12 @@
 .app-tabs{
+    width: 100%;
     position: fixed;
+    .tob{
+        display: flex;
+        justify-content: space-between;
+        line-height: .4rem;
+        font-size: .14rem;
+        margin: 0 .14rem;
+        li{}
+    }
 }

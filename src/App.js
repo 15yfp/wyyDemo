@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Tabs from './components/common/Tabs/index.js'
+import MainContaier from './components/MainContaier/index.js'
 class App extends Component {
   render() {
     return (
       <div>
-          <Tabs/>
+          <MainContaier/>
       </div>
     );
   }
