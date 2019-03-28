@@ -1,0 +1,13 @@
+.downvideoAll{
+    clear: both;
+    width: 355px;
+    height: 400px;
+    
+}
+.downvideoNone{
+    height: 300px;
+    background: url(../style/kong.png) no-repeat center;
+}
+.downvideoAll h1{
+    text-align: center;
+}

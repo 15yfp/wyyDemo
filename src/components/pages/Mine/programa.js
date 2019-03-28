@@ -2,8 +2,12 @@ import React, { Component } from "react"
 import { BrowserRouter as Router, Link, Route } from "react-router-dom"
 import ThisSong from './ThisSong/thisSong'
 import RecPlayed from './RecentlyPlayed/recPlayed'
+import DownManage from './downManage/dowmManage'
+import MyFm from './myFm/myFm'
 import './programa.css'
 class Programa extends Component {
+
+    
     render() {
         return (
             <Router>
@@ -20,19 +24,21 @@ class Programa extends Component {
                 </div>
                 <div className="programaItem">
                     <div className="proaramaItemsp"><span className="iconfont">&#xe654;</span></div>
-                    <div className="proaramaItems mydown">下载管理 <i>(0)</i></div>
+                    <div className="proaramaItems mydown"><Link to="/downmanage">下载管理</Link> <i>(0)</i></div>
+                    <Route path="/downmanage" component={DownManage}/>
                 </div>
                 <div className="programaItem">
                     <div className="proaramaItemsp"><span className="iconfont">&#xe506;</span></div>
-                    <div className="proaramaItems myfm">我的电台 <i>(0)</i></div>
+                    <div className="proaramaItems myfm"><Link to="/myfm">我的电台</Link> <i>(0)</i></div>
+                    <Route path="/myfm" component={MyFm}/>
                 </div>
-                <div className="programaItem">
+                <div className="programaItem" >
                     <div className="proaramaItemsp"><span className="iconfont">&#xe639;</span></div>
                     <div className="proaramaItems mycollect">我的收藏 <i>(专辑/歌手/视频/专栏)</i></div>
                 </div>
 
             </div>
-            </Router>
+            // </Router>
         )
     }
 }

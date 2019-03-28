@@ -32,6 +32,7 @@
     margin:5px 4px;
     /* margin-right: 8px; */
 }
+
 .songp{
     margin-right: 0;
 }
@@ -43,7 +44,9 @@
     background: blue;
 } 
 .recomSong h1{
-    font-size: 12px;
+    height: 32px;
+    font-size: 8px;
+    overflow: hidden;
 }
 .pic{
     display: block;

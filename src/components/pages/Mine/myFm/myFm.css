@@ -1,0 +1,135 @@
+
+.myfms{
+    width: 375px;
+    background: #fff;
+    position: fixed; 
+    min-height: 600px;
+    top:0;
+    left: 0;
+    padding: 0 10px;
+    z-index: 1000;
+    overflow: hidden;
+    /* display:none; */
+    
+}
+.myfms-header{
+    padding: 10px 0px;
+    width: 355px;
+    height: 45px;
+    line-height: 25px;
+}
+.myfms-title{
+    display: block;
+    height: 22px;
+    float: left;
+    font-size: 17px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+.myfms-icon-left{
+    float: left;
+}
+.myTackFm{   
+    width: 100%;
+}
+.myTackFm b{
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+}
+.myTackFmAll{
+    min-height: 100px;
+    padding: 5px 0;
+}
+.myTackFmList{
+    height: 80px;
+    float: left;
+    margin-bottom: 5px;
+}
+.myTackFmPic{
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 8px;
+    float: left;
+}
+.myTackFmType{
+    width: 244px;
+    height: 80px;
+    float: left;
+}
+.myTackFmType h1{
+    height: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+}
+.myTackFmType h2{
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.myTackFmRight{
+    width: 30px;
+    height: 80px;
+   background: url(../style/ddd.png) no-repeat left center;
+   background-size: 20px;
+    float: left;
+}
+
+
+.recomFm{
+    clear: both;
+    padding: 10px 0;
+    height: 100%;
+    width: 355px;
+
+}
+.recomFmTitle{
+    height: 30px;
+}
+.recomFmTitle .recomFmImg{
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: url(../style/shoucang.png) no-repeat center;
+    background-size: 15px;
+    background-color: red;
+}
+.recomFmImg,.recomFmTls{
+    float: left;
+}
+.recomFmTitle .recomFmTls{
+    height: 25px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 20px;
+}
+.recomFmAll{
+    float: left;
+    width:110px;
+    margin:5px 4px;
+    /* margin-right: 8px; */
+}
+
+.recomFmp{
+    margin-right: 0;
+}
+ .recomFmCover{
+     
+     border-radius: 5px;
+    height: 110px;
+    width: 110px;
+    background: blue;
+} 
+.recomFmh1{
+    height: 32px;
+    font-size: 8px;
+    overflow: hidden;
+}
+.recomFmpic{
+    display: block;
+    height: 100%;
+    width:100%;
+}

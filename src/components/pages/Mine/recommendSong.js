@@ -14,8 +14,7 @@ class RecommendSong extends Component {
     componentDidMount(){
         const _this=this
         axios.get('http://localhost:3000/personalized').then(
-            function(res){
-               
+            function(res){              
                _this.setState({
                    arr:res.data.result.slice(0,6)
                })
@@ -37,7 +36,7 @@ class RecommendSong extends Component {
                             <div className="songCover"> 
                             <img className="pic" src={item.picUrl}/>
                                 </div>
-                            <h1>{item.name}</h1>
+                            <h1 className="recomSongh1">{item.name}</h1>
                         </div>
                     )
                 })}

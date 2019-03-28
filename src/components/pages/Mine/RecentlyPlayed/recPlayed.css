@@ -1,4 +1,5 @@
-.thissong{
+
+.recplayed{
     width: 375px;
     min-height: 667px;
     background: #fff;
@@ -6,16 +7,16 @@
     top:0;
     left: 0;
     padding: 0 10px;
+    z-index: 1000;
     /* display:none; */
 }
-.thissong-header{
+.recplayed-header{
     padding: 10px 0px;
     width: 355px;
     height: 45px;
-    background: darkcyan;
     line-height: 25px;
 }
-.thissong-title{
+.recplayed-title{
     display: block;
     height: 22px;
     float: left;
@@ -23,27 +24,19 @@
     line-height: 22px;
     margin-left: 10px;
 }
-.thissong-icon-left{
+.recplayed-icon-left{
     float: left;
 }
 .recplayed-right{
-    display: block;
     float: right;
 }
-.thissong-list{
-    height: 30px;
-   border-bottom: 1px solid #ccc;
-}
-.thissong-list li{
-    float: left;
-    
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-} 
-.recLink{
-    font-size: 16px;
-    display: inline-block;
-    padding: 0px 72px;
-    height: 29px;
+
+
+
+.recplayed-item{
+    display: flex; 
+    alignItems: center;
+    justifyContent: center; 
+    height: 400px; 
+    backgroundColor: #fff;
 }

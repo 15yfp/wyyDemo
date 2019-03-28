@@ -1,0 +1,13 @@
+.downFm{
+    clear: both;
+    width: 355px;
+    height: 400px;
+    
+}
+.downFmNone{
+    height: 300px;
+    background: url(../style/kong.png) no-repeat center;
+}
+.downFm h1{
+    text-align: center;
+}

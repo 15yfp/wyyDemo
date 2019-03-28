@@ -1,4 +1,4 @@
- .recplayed{
+.thissong{
     width: 375px;
     min-height: 667px;
     background: #fff;
@@ -6,15 +6,16 @@
     top:0;
     left: 0;
     padding: 0 10px;
+    z-index: 1000;
     /* display:none; */
 }
-.recplayed-header{
+.thissong-header{
     padding: 10px 0px;
     width: 355px;
     height: 45px;
     line-height: 25px;
 }
-.recplayed-title{
+.thissong-title{
     display: block;
     height: 22px;
     float: left;
@@ -22,28 +23,37 @@
     line-height: 22px;
     margin-left: 10px;
 }
-.recplayed-icon-left{
+.thissong-icon-left{
     float: left;
 }
 .thissong-icon-search{
+    display: block;
     float: right;
 }
-.recplayed-list{
+.thissong-list{
     height: 30px;
    border-bottom: 1px solid #ccc;
 }
-.recplayed-list li{
+.thissong-list li{
     float: left;
     
     height: 30px;
     line-height: 30px;
     text-align: center;
 } 
-.thisLink{
-
+.recLink{
+    font-size: 16px;
     display: inline-block;
-    padding: 0px 28px;
+    padding: 0px 72px;
     height: 29px;
 }
+.thissong-item{
+    display: flex; 
+    alignItems: center;
+    justifyContent: center; 
+    height: 400px; 
+    backgroundColor: #fff;
+}
+
 
 

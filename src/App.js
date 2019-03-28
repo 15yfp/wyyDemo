@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Route,Switch,withRouter }  from 'react-router-dom'
 import './App.css';
 import MainContaier from './components/MainContaier/index.js'
-<<<<<<< HEAD
+ 
 
-=======
+
 import { Search } from './components/pages/index'
->>>>>>> debbf6d07e8a227ac20d38ea2c7551a10f7a913b
+ 
 class App extends Component {
   constructor(props){
     super(props)
@@ -24,27 +24,20 @@ class App extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <div>
-        
-          <MainContaier/>
-         
-=======
       <div className="App">
-          <Switch>
+          {/* <Switch>
               { this.renderRoutes() }
-          </Switch>
->>>>>>> debbf6d07e8a227ac20d38ea2c7551a10f7a913b
+          </Switch> */}
+          <MainContaier/>
       </div>
-      
     );
   }
 }
-App.defaultProps = {
-  routes: [
-    {id: 1,path:'/',component: MainContaier,exact: true},
-    {id: 2,path: '/search',component: Search}
+// App.defaultProps = {
+//   routes: [
+//     {id: 1,path:'/',component: MainContaier,exact: true},
+//     {id: 2,path: '/search',component: Search}
     
-  ]
-}
+//   ]
+// }
 export default withRouter(App);
