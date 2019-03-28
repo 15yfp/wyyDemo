@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react'
-import { CSSTransition } from 'react-transition-group';
+import { Link } from "react-router-dom"
 import './index.scss'
 export default class ModalCont extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -30,14 +31,21 @@ export default class ModalCont extends Component {
             <div className="nav-list">
                 <div className="nav-cont">
                     <div className="nav-header">
-                        <div className="nav-header-img">
-                            <img src=""/>
-                            <span>上传头像</span>
+                        <div className="user-info">
+                            <div className="nav-header-img">
+                                <img src=""/>
+                                <span>上传头像</span>
+                            </div>
+                            <p>
+                                <span>这里是用户名<i>Lv.5</i></span>
+                                <span><i className="iconfont icon-qiandao"></i>签到</span>
+                            </p>
                         </div>
-                        <p>
-                            <span>这里是用户名<i>Lv.5</i></span>
-                            <span><i className="iconfont icon-qiandao"></i>签到</span>
-                        </p>
+                        <div className="login-info">
+                            <p>登录网易云音乐</p>
+                            <p>手机电脑多段同步，尽享海量高品质音乐</p>
+                            <Link to="/member" >立即登录</Link>
+                        </div>
                     </div>
                     { this.renderItem() }
                     <ul className="nav-foot"> 
@@ -55,14 +63,14 @@ export default class ModalCont extends Component {
     ModalCont.defaultProps = {
         navLists: [
             { id: 1, title: "我的信息",icon: 'xinxi-'},
-            { id: 2, title: "会员中心",icon: 'tubiaozhizuomoban'},
-            { id: 3, title: "云村有票",icon: 'huopiaotongxing'},
+            { id: 2, title: "会员中心",icon: 'huiyuanzhongxin'},
+            { id: 3, title: "云村有票",icon: 'tianmaohuopiaotongxing'},
             { id: 4, title: "商城",icon: 'gouwuche'},
             { id: 5, title: "在线听歌免流量",icon: 'biaoshilei_zaixianjiance'},
             { id: 6, title: "我的好友",icon: 'wode'},
             { id: 7, title: "附近的人",icon: 'weibiaoti-3'},
             { id: 8, title: "个性换肤",icon: 'pifu'},
-            { id: 9, title: "听歌识曲",icon: 'tubiaozhizuomoban'},
-            { id: 10, title: "定时停止播放",icon: 'ai253'}
+            { id: 9, title: "听歌识曲",icon: 'huabankaobei-'},
+            { id: 10, title: "定时停止播放",icon: 'time'}
         ]
 }

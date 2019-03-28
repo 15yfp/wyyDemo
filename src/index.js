@@ -15,17 +15,9 @@ import './stylesheets/main.scss'
 //引入路由
 import { BrowserRouter as Router } from 'react-router-dom'
 
-//引入redux   Previder 
-// import store from './store'
-// import {Provider} from 'react-redux'
-
 ReactDOM.render(
-    // <Provider store = {store}>
         <Router>
             <App />
         </Router>
-    // </Provider>
 , document.getElementById('root'));
-
-
 serviceWorker.unregister();
