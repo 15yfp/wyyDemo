@@ -57,15 +57,15 @@ export default class MainContaier extends Component {
       </li>
     )
   }
-<<<<<<< HEAD
 
-=======
+
+
   isModel(msg){
       this.setState({
          isShow: false
       })
   }
->>>>>>> debbf6d07e8a227ac20d38ea2c7551a10f7a913b
+
   render() {
     let { isShow } = this.state
     return (
