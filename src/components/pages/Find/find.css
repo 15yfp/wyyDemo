@@ -1,0 +1,234 @@
+*{
+    box-sizing:border-box;
+}
+html{
+    font-size: 26.67vw;
+}
+html body{
+    height:100%;
+}
+.find_banner,.Recommend,.Recommend_songs,.new_songs,.Selected,.Anchor {
+    background:#fff;
+    margin-top:0.1rem;
+}
+ul {
+    list-style:none;
+}
+.list_ul{
+    height:0.90rem;
+    border-bottom:2px solid #f6f6f6
+}
+.list_ul li  {
+    float:left;
+    width:20%;
+    height:0.81rem;
+    padding-top:0.1rem; 
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    text-align:center
+}
+.list_ul li a {
+    display:block;
+
+}
+.list_ul li a span {
+    font-size:12px;
+    font-weight:700;
+}
+.list_ul li .icon {
+    display:block;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius:50%;
+    background:#f75e35;
+    color:#fff;
+    margin-bottom:0.05rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+ul:after{
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}
+/* find_Recom组件 */
+.recom_title {
+    padding:0.15rem 0.15rem 0 0.15rem;
+}
+.recom_title h3{
+    font-weight:700
+}
+.songs {
+    margin-top: 15px;
+}
+.songs_ul {
+    width:100%;
+}
+.songs_ul li {
+    float:left;
+    width: 32.17%;
+    margin-right:4px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+.songs_ul li a span{
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.songs .songs_ul li:nth-child(3){
+    margin-right:0
+}
+.songs .songs_ul li:nth-child(6){
+    margin-right:0
+}
+.songs_ul li a {
+    display:block;
+}
+.songs_ul li a img {
+    width: 100%;
+    height: 100%;
+}
+.songs_ul:after{
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}
+/* 新碟 */
+.find_selected{
+    margin-top:10px;
+    border-bottom: 3px solid #f6f6f6;
+}
+.recom_top{
+    position: relative;
+    height: 0.3rem;
+}
+.float_left{
+    float:left;
+    margin-right:5px;
+}
+.more_songs {
+    display:block;
+    float:right;
+    border:1px solid #000;
+    font-size:12px;
+    padding:2px 4px;
+    border-radius:10px;
+    margin-top: 3px;
+}
+.s_line{
+    line-height: 0.19rem;
+}
+.new_span{
+    color:#828282;
+    line-height:0.21rem;
+}
+/* 云村精选 */
+.sele_top{
+    position:relative;
+    padding:10px 10px
+}
+.sele_top h3{
+    float:left;
+    font-weight:700;
+}
+.right_a {
+    float:right;
+}
+.sele_top:after{
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}
+.vip {
+    overflow:hidden;
+    position: relative;
+    padding: 10px 10px;
+}
+.vip h3 {
+    float:left;
+    font-weight:700;
+}
+.sele_banner {
+    overflow: hidden;
+}
+.vedio{
+    margin-top:0.18rem;
+    padding:0.1rem 0.1rem;
+}
+.vedio_div {
+    width:100%;
+    position:relative;
+    margin-bottom:0.1rem;
+}
+.vedio_div img{
+    width:100%;
+}
+.vedio_div a {
+    position:absolute;
+    display:block;
+    width: 150px;
+    height: 150px;
+    background:url(../../../assets//images/4.png) no-repeat;
+    background-size: 60% 60%;
+    left: 140px;
+    top: 60px;
+    opacity: 0.8;
+}
+.find_look{
+    margin-top:0.1rem;
+}
+.find_look_top {
+    overflow:hidden;
+    padding:0.1rem 0.1rem;
+}
+.find_look_top h3 {
+    float:left;
+    font-weight:700;
+}
+.ul_girl{
+    padding:0.1rem 0.1rem;
+}
+.ul_girl li{
+    float:left;
+    height:1.62rem;
+    background:pink;
+    margin-right:0.04rem;
+}
+.ul_girl li a {
+    display:block;
+}
+.ul_girl li a img {
+    width:100%
+}
+.vedio_look{
+    padding:0.1rem 0.1rem;
+}
+.vedio_look_first {
+    width:100%;
+    height:2.1rem;
+    background:pink;
+}
+/* 主播电台 */
+.anchor_vedio {
+    width:100%;
+    position: relative;
+    margin-bottom: 0.1rem;
+}
+.anchor_vedio img {
+    width:100%;
+}
+/* 轮播图 */

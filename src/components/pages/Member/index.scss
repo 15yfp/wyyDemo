@@ -1,0 +1,18 @@
+.app-member{
+    text-align: center;
+    padding: 0 .2rem;
+    .member-img{
+
+    }
+    .member-con{
+        a{
+            display: block;
+            line-height: .32rem;
+            width: 100%;
+            border-radius: 20px;
+        }
+        .loginBtn{
+            background: #ff4d3c;            
+        }
+    }
+}

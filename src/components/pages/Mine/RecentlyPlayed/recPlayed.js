@@ -20,17 +20,14 @@ class RecPlayed extends Component {
                     <span className='recplayed-title'>最近播放</span>
                     <span className='recplayed-right'>清空</span>
                  </div>
-
                 <div className='recplayed-list'>
                     <ul>
-                        <li><Link to="/recplayed/recsing" className="recLink" activeStyle={{color: 'red'}}>歌曲</Link></li>
-                        <li><Link to="/recplayed/recvideo" className="recLink" activeStyle={{color: 'red'}}>视频</Link></li>                      
+                        <li><Link to="/recplayed/recsing" className="recLink">歌曲</Link></li>
+                        <li><Link to="/recplayed/recvideo" className="recLink">视频</Link></li>                      
                         <Route path="/recplayed/recsing" component={Recsing} />
                         <Route path="/recplayed/recvideo" component={Recvideo} />
                     </ul>
                 </div>
-                
-
             </div>
         )
     }
