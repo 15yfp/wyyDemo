@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import LazyLoad from 'react-lazyload'
 import { Mine, Find, Friends, Video, ModalCont} from '../pages/index'
 import './index.scss'
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 export default class MainContaier extends Component {
   constructor(props){
     super(props)
@@ -57,15 +57,12 @@ export default class MainContaier extends Component {
       </li>
     )
   }
- 
-
 
   isModel(msg){
       this.setState({
          isShow: false
       })
   }
-
   render() {
     let { isShow } = this.state
     return (
@@ -73,11 +70,12 @@ export default class MainContaier extends Component {
           <ul className="tobs">
               <li className="list" onClick={()=>{this.setState({ isShow:true})}}></li>
               <LazyLoad> { this.renderBar() } </LazyLoad>
-              <NavLink to= {{ pathname: '/search' }} ><li className="search"></li></NavLink>
+              <li><Link to= '/search'  className="search"></Link></li>
               {   isShow ? <ModalCont method={this.isModel.bind(this)}/> : null }
           </ul>
           { this.renderItem() }
-      </div>
+        </div>
+
     )
   }
 }

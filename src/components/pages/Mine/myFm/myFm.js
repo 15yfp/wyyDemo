@@ -33,7 +33,7 @@ class TackFm extends Component{
     };
     componentDidMount(){
         const _this=this
-        axios.get('http://localhost:3000/personalized').then(
+        axios.get('http://localhost:3000/personalized/djprogram').then(
             function(res){
                
                _this.setState({
@@ -90,9 +90,11 @@ class TackFm extends Component{
                 {/* 推荐电台 */}
                 <div className="recomFm">
                 <div className="recomFmTitle">
-                    <span className="recomFmImg"></span><span className="recomFmTls">推荐歌单</span>
+                    <span className="recomFmImg"></span><span className="recomFmTls">推荐电台</span>
                 </div>
-                {this.state.arr.map((item,i)=>{
+                <div className="gedan">
+                    {this.state.arr.map((item,i)=>{
+                    
                     return (
                         <div className="recomFmAll" key={i}> 
                             <div className="recomFmCover"> 
@@ -101,7 +103,9 @@ class TackFm extends Component{
                             <h1 className="recomFmh1">{item.name}</h1>
                         </div>
                     )
-                })} 
+                })}
+                </div>
+                 
                 </div>
                 
             </div>

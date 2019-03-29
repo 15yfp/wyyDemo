@@ -1,17 +1,13 @@
 .thissong{
-    width: 375px;
-    min-height: 667px;
-    background: #fff;
-    position: fixed; 
-    top:0;
-    left: 0;
-    padding: 0 10px;
-    z-index: 1000;
+    
+    overflow: hidden;
+    min-height: 600px;
     /* display:none; */
+    padding: 0 10px;
 }
 .thissong-header{
     padding: 10px 0px;
-    width: 355px;
+    width: 100%;
     height: 45px;
     line-height: 25px;
 }

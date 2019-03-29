@@ -30,7 +30,8 @@ class RecommendSong extends Component {
                 <div className="SongTitle">
                     <span className="img"></span><span className="title">推荐歌单</span>
                 </div>
-                {this.state.arr.map((item,i)=>{
+                <div className='gedan'>
+                    {this.state.arr.map((item,i)=>{
                     return (
                         <div className="songAll" key={i}> 
                             <div className="songCover"> 
@@ -40,6 +41,8 @@ class RecommendSong extends Component {
                         </div>
                     )
                 })}
+                </div>
+                
                 
                 
             </div>

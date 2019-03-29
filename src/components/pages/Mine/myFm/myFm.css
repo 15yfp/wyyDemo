@@ -1,20 +1,15 @@
 
 .myfms{
-    width: 375px;
-    background: #fff;
-    position: fixed; 
-    min-height: 600px;
-    top:0;
-    left: 0;
-    padding: 0 10px;
-    z-index: 1000;
+    background: rgb(245,245,245);
+    
     overflow: hidden;
-    /* display:none; */
+    min-height: 600px;
+    padding: 0 10px;
     
 }
 .myfms-header{
     padding: 10px 0px;
-    width: 355px;
+    width: 100%;
     height: 45px;
     line-height: 25px;
 }
@@ -38,13 +33,17 @@
     color: black;
 }
 .myTackFmAll{
+    
     min-height: 100px;
     padding: 5px 0;
+  
 }
 .myTackFmList{
     height: 80px;
+    width: 100%;
     float: left;
     margin-bottom: 5px;
+    background:#fff;
 }
 .myTackFmPic{
     width: 80px;
@@ -74,7 +73,7 @@
     height: 80px;
    background: url(../style/ddd.png) no-repeat left center;
    background-size: 20px;
-    float: left;
+    float: right;
 }
 
 
@@ -82,7 +81,8 @@
     clear: both;
     padding: 10px 0;
     height: 100%;
-    width: 355px;
+    width: 100%;
+    background:#fff;
 
 }
 .recomFmTitle{
@@ -108,20 +108,16 @@
 }
 .recomFmAll{
     float: left;
-    width:110px;
-    margin:5px 4px;
+    width:32%;
     /* margin-right: 8px; */
 }
 
 .recomFmp{
     margin-right: 0;
 }
- .recomFmCover{
-     
+ .recomFmCover{ 
      border-radius: 5px;
-    height: 110px;
-    width: 110px;
-    background: blue;
+    width: 100%;
 } 
 .recomFmh1{
     height: 32px;

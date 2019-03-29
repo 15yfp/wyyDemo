@@ -1,20 +1,21 @@
 .recvideoAll{
-    width: 375px;
+    width: 100%;
 }
 .recvideoList{
+    width: 100%;
+    margin: 0  auto;
     height: 60px;
-    background:pink
 }
 .recvideoPic{
     float: left;
     height: 60px;
-    width: 30%;
+    width: 60px;
     background:blue;
 }
 .recvideoType{
     float: left;
     height: 60px;
-    width:65%;
+    width:80%;
     background: #ccc;
 }
 .recvideoType h1{

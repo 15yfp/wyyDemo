@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Player } from 'video-react';
 
-
-import "../../../../../node_modules/video-react/dist/video-react.css";
-
-
 class Play extends Component {
     constructor(props) {
         super(props)
@@ -13,8 +9,6 @@ class Play extends Component {
         this.state = {
             obj: {},
             lll:false
-
-           
         }
     }
 

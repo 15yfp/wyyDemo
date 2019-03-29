@@ -3,8 +3,8 @@ import './recvideo.css'
 export default class Recvideo extends Component {
   render() {
     return (
-      <div>
-          <div className="recvideoAll">
+      <div className="recvideoAll">
+          <div>
               <li className="recvideoList">
                 <div className="recvideoPic"><img src="" /></div>
                 <div className="recvideoType">

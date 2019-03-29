@@ -21,7 +21,8 @@
             background: url("../../assets/images/list.png") no-repeat center center;
             background-size: .24rem .24rem;
         }
-        li.search{
+        .search{
+            display: block;
             width: .15rem;
             height: .15rem;
             background: url("../../assets/images/search.png") no-repeat center center;

@@ -95,4 +95,8 @@ class RecPlayed extends Component{
     
 
 
+
+// import React, { Component } from 'react'
+// import { Tabs, WhiteSpace } from 'antd-mobile';
+
 export default RecPlayed
