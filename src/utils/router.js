@@ -7,6 +7,7 @@ import RecPlayed from '../components/pages/Mine/RecentlyPlayed/recPlayed'
 import DownManage from '../components/pages/Mine/downManage/dowmManage'
 import MyFm from '../components/pages/Mine/myFm/myFm'
 
+
 class MyappRouter extends Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props){
@@ -43,8 +44,9 @@ MyappRouter.defaultProps = {
     {id: 5,path: '/register',component: Register},
     {id: 50,path: '/thissong',component:ThisSong},
     {id: 51,path: '/recplayed',component:RecPlayed},
-    {id: 50,path: '/downmanage',component:DownManage},
-    {id: 50,path: '/myfm',component:MyFm}
+    {id: 52,path: '/downmanage',component:DownManage},
+    {id: 53,path: '/myfm',component:MyFm},
+   
 
   ]
 }

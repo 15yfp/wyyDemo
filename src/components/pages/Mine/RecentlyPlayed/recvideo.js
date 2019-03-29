@@ -6,7 +6,7 @@ export default class Recvideo extends Component {
       <div className="recvideoAll">
           <div>
               <li className="recvideoList">
-                <div className="recvideoPic"><img src="" /></div>
+                <div className="recvideoPic"><img src="" alt="" /></div>
                 <div className="recvideoType">
                   <h1>&nbsp;&nbsp;换行显示显示省略号</h1>
                   <div className="recvideoTypes">&nbsp;&nbsp;

@@ -16,7 +16,7 @@ class MyFm extends Component {
                 <div className='myfms-header'>
                     <Icon className="myfms-icon-left" type="left" onClick={this.thissongOuit.bind(this)} />
                     <span className='myfms-title'>我的电台</span>   
-                </div>
+                </div>    
                 <TackFm/>
             </div>
         )
