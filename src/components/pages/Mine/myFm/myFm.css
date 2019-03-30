@@ -129,4 +129,12 @@
     height: 100%;
     width:100%;
 }
-
+.djPic{
+    height: 100%;
+    width: 100%;
+}
+.Djkong{
+    height: 90px;
+    width: 100%;
+    background:red;
+}

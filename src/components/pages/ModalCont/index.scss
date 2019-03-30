@@ -21,17 +21,20 @@
                 padding:.34rem .18rem 0;
                 box-sizing: border-box;
                 .user-info{
-                    display: none;
+                    // display: none;
                     .nav-header-img{
                         width: .68rem;
                         height: .68rem;
                         background: rgba(0,0,0,1);
                         border-radius: 50%;
                         text-align: center;
+                        overflow: hidden;
                         display: flex;
                         align-items: center;
                         img{
-                            display: none;
+                            
+                            height: 100%;
+                            width: 100%;
                         }
                         span{
                             display: inline-block;
