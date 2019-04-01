@@ -8,7 +8,7 @@ export default class MainContaier extends Component {
   constructor(props){
     super(props)
     this.state = {
-        tabs : [
+        tablists : [
               {id:1,title: "我的",cat:"mine",com: <Mine/>},
               {id:2,title: "发现",cat:"find",com: <Find/>},
               {id:3,title: "朋友",cat:"friend",com: <Friends/>},
@@ -22,7 +22,7 @@ export default class MainContaier extends Component {
     return (
       <div>
           {
-            this.state.tabs.map((item) => {
+            this.state.tablists.map((item) => {
               if(this.state.type == item.cat){
                 return (
                   <div key={item.id}>
@@ -39,7 +39,7 @@ export default class MainContaier extends Component {
     return (
       <li className="top-center">
           {
-            this.state.tabs.map((item) => {
+            this.state.tablists.map((item) => {
                 return (
                   <a 
                       className="tabsBtn" 

@@ -1,0 +1,131 @@
+html,body{
+    height:100%
+}
+.music_root{
+    background:#7e7688;
+}
+
+.music_top{
+    overflow:hidden;
+    padding:0.1rem 0.1rem;
+    color:#fff;
+}
+.music_top div {
+    float:left;
+    color:#fff;
+}
+.music_top i {
+    font-size:0.3rem;
+}
+.div_p {
+    width: 2rem;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.music_top div span {
+    font-size:12px;
+    color:#b2b1b9;
+}
+.music_top .go_back{
+    float:left;
+    line-height: 0.36rem;
+    margin-right: 0.16rem;
+}
+.share{
+    float:right;
+    line-height: 0.36rem;
+}
+.music_center {
+    position:relative;
+    overflow: hidden;
+    min-height: 4.65rem;
+}
+.music_Record{
+    width:1rem;
+    height:1.6rem;
+    background:url(./needle.png)no-repeat;
+    background-size:1rem 1.6rem;
+    left:50%;
+    margin-left:-0.2rem;;
+    position:absolute;
+    z-index: 100;
+}
+.music_back{
+    position:relative;
+    width:1.41rem;
+    height:1.41rem;
+    margin:0 auto;
+    margin-top:1rem;
+    background-size:1.41rem 1.41rem!important;
+}
+.autoplay{
+    animation:3s circleRoate infinite linear;
+}
+.music_pic {
+    position:absolute;
+    height:2.3rem;
+    width:2.3rem;
+    background:url(./3.png) no-repeat;
+    background-size:2.3rem 2.3rem;
+    right: 0;
+    bottom: 0;
+    top: 0.55rem;
+    left: 0.72rem;
+}
+.music_ul{
+    overflow:hidden;
+}
+.music_ul li {
+    width:20%;
+    float:left;
+    color:#fff;
+    text-align:center;
+}
+.music_ul li i {
+    font-size:0.3rem!important;
+}
+.Progress_bar {
+    overflow:hidden;
+    padding:0.1rem 0.1rem;
+    line-height: 5px;
+}
+.Progress_bar .float{
+    float:left;
+}
+.Progress_bar span {
+    color:#a4a4a9;
+}
+.Progress {
+    width:2.88rem;
+    border:1px solid #a4a4a9;
+    margin-left:5px;
+    margin-right:6px;
+}
+.progress_son{
+    width:0;
+    border:1px solid red;
+}
+.play_ul{
+    overflow:hidden;
+    padding:0.1rem 0.1rem;
+}
+.play_ul li {
+    text-align:center;
+    width:20%;
+    float:left;
+}
+.play_ul li i {
+    display:inline-block;
+    color:#fff;
+    font-size:0.3rem;
+}
+.play_ul li:nth-child(3) i{
+    margin-top: -0.2rem;
+    font-size: 0.55rem;
+}
+@keyframes circleRoate{  
+    from{transform: rotate(0deg);}  
+    to{transform: rotate(360deg);}  
+}

@@ -1,0 +1,164 @@
+.songSheet_root{
+    padding:0.2rem 0.2rem;
+}
+.songSheets {
+    overflow:hidden;
+    padding-top: 0.1rem;
+}
+.songSheet_top h3{
+    font-weight:700;
+}
+.songSheets li {
+    width:31%;
+    float:left;
+    margin-right: 0.04rem;
+    margin-bottom: 0.1rem;
+}
+.songSheets li a {
+    display:block;
+    position:relative;
+}
+.songSheets li a img {
+    width:100%;
+    height:100%;
+}
+.songSheets li a span {
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.p_root{
+    width:100%;
+    height:100%;
+}
+/* PlayMusic */
+.song_root{
+    background-size:50% 50%
+}
+.song_details{
+    padding:0.2rem 0.2rem
+}
+.song_details_top{
+    overflow:hidden;
+}
+.song_details_left{
+    width:45%;
+    background:pink;
+    float:left;
+}
+.song_details_left img {
+    width:100%;
+}
+.song_details_right{
+    width:51%;
+    float:right;
+    color:#fff;
+}
+.song_details_right h1 {
+    font-size:16px;
+    font-weight:700;
+}
+.icon_name{
+    overflow:hidden;
+    margin-top: 0.1rem;
+}
+.icon_name img {
+    margin-right: 0.05rem;
+    width:24px;
+    height:24px;
+    float:left;
+    border-radius:50%;
+}
+.icon_name span {
+    font-size:0.12rem;
+    color:#fff8f1;
+}
+.introduce{
+    margin-top:0.1rem;
+    font-size:12px;
+    color:#dfd2c9;
+}
+.oul{
+    overflow:hidden;
+    margin-top:0.3rem;
+}
+.oul li {
+    text-align:center;
+    float:left;
+    width:25%;
+    color:#fff;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+.oul li i {
+   font-size: 0.26rem;
+}
+.play_all{
+    background:#fff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.play_all_root{
+    padding:0.2rem 0.2rem
+}
+.play_all_top {
+    overflow:hidden;
+}
+.play_all_top li {
+    float:left;
+    line-height:0.4rem;
+}
+.play_all_top li:nth-child(2) p {
+    font-weight:700;
+}
+.play_all_top li i {
+    font-size:0.3rem;
+}
+.first_li{
+    margin-right:0.1rem;
+}
+.span_color{
+    width:2rem;
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    font-size:0.12rem;
+    color:#8e8e8e;
+}
+.p_color{
+    width:2rem;
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.List_ul{
+    padding: 0 0.1rem;
+}
+.List_ul li {
+    overflow:hidden;
+}
+.List_ul li div{
+    float:left;
+}
+.List_ul .lineHeight{
+   text-align:center;
+   width:20px;
+   line-height:35px;
+   margin-right:13px;
+}
+.List_ul li div:nth-child(3){
+    float:right;
+}
+.List_ul li div:nth-child(4){
+    float:right;
+}
+.icon_color{
+    color:#afafaf;
+    font-size: 0.30rem;
+}
+

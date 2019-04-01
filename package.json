@@ -5,6 +5,7 @@
   "dependencies": {
     "antd-mobile": "^2.2.11",
     "axios": "^0.18.0",
+    "better-scroll": "^1.15.1",
     "customize-cra": "^0.2.12",
     "install": "^0.12.2",
     "node-sass": "^4.11.0",
@@ -16,6 +17,7 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "react-sticky": "^6.0.3",
     "react-transition-group": "^2.7.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",

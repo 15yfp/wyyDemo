@@ -9,12 +9,16 @@ class Banner extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        data: this.props.todo
       });
     }, 100);
+
+    // console.log(this.props.todo)
   }
   render() {
-    let {todo} = this.props
+    // let {todo} = this.props
+    // console.log(this.state.data)
+    let {data} =this.state
     // console.log(todo)
     return (
       <WingBlank>
@@ -24,7 +28,7 @@ class Banner extends React.Component {
           // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
           // afterChange={index => console.log('slide to', index)}
         >
-          {todo.map(todos => (
+          {data.map(todos => (
             <a
               key={todos}
               href="javascript:;"

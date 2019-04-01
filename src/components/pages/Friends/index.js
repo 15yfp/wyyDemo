@@ -8,6 +8,7 @@ export default class Friends extends Component {
         friendsItems: []
     }
   }
+  
   componentWillMount(){
     axios.get("http://localhost:3000/user/event?uid=32953014")
     .then( res=>{
@@ -31,7 +32,7 @@ export default class Friends extends Component {
                         <ul className="item-info">
                             <li className="item-title">
                                 <p><span>{ item.user.signature }</span>分享单曲:</p>
-                                <b>{ item.user.province }粉丝</b>
+                                <b>{ item.user.province/10000 }万粉丝</b>
                                 <a className="attention">+关注</a>
                             </li>
                             <li>留下你的生日，没准明年可以搭伴过</li>
