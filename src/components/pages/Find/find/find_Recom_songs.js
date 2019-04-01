@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import {Link} from "react-router-dom"
 class Recom_songs extends React.Component {
     constructor() {
         super()
@@ -14,21 +15,26 @@ class Recom_songs extends React.Component {
                     })
             })
     }
+    Listen_music(id){
+        console.log(id)
+    }
     render() {
         return (
                 <div className="recom_title">
-                    <h3>推荐歌单</h3>
+                    <Link to="/recomSongs">
+                        <h3>推荐歌单</h3>
+                    </Link>
                     <div className="songs">
                         <ul className="songs_ul">
                             {this.state.recomSongs.map((item,index) => {
                                 return(
                                     <li key={index}>
-                                        <a href="javascript:;">
+                                        <Link to={{pathname:"/playMusic",state:{uid:item.id}}}  onClick={this.Listen_music.bind(this,item.id)}>
                                             <div>
                                                 <img src={item.picUrl} alt=""/>
                                             </div>
                                             <span>{item.name}</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 )
                             })}

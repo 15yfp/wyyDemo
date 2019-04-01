@@ -1,0 +1,98 @@
+.search-top{
+   span{
+      display: inline-block;
+      width: 88%;
+      border-bottom: 1px solid #999;
+      line-height: .2rem;      
+      -webkit-border-bottom: 1px solid #999;
+      padding-bottom: .04rem;
+      input{
+         border: 0;
+         line-height: .2rem;
+         width: 92%;
+      }
+      ::-webkit-input-placeholder{
+         color: #d0d0d0;
+      }
+      i{
+         margin-right: 0;
+         font-size: .24rem;
+      }
+   }
+}
+
+.search-song{
+   margin-top: .16rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 .2rem;
+   h3{ font: 600 .16rem/.3rem "";i{color:#d0d0d0;margin-left: .06rem;} }
+   .song-img{
+      position: relative;
+      display: flex;
+      img{
+         position: absolute;
+         width: .28rem;
+         height: .28rem;
+         border-radius: 50%;
+         border: 1px solid #fff;
+      }
+      img:nth-of-type(1){
+         right:0;
+         z-index: 2;
+      }
+      img:nth-of-type(2){
+         right: .2rem;
+         z-index: 1;
+      }
+      img:nth-of-type(3){
+         right: .4rem;
+      }
+   }
+}
+.search-con{
+   padding: 0 .2rem;
+   dl{
+      margin-top: .24rem;
+      overflow: hidden;
+      dt{
+         display: flex;
+         justify-content: space-between;
+         font: 600 .14rem/.3rem "";
+         i{ color: #d0d0d0;}
+      }  
+      dd{
+         padding: .07rem .15rem;
+         background: #f3f3f3;
+         border-radius: 20px;
+         float: left;
+         margin: .1rem .1rem 0 0;
+      }
+   }
+}
+.app-search-model{
+   position: fixed;
+   top: .5rem;
+   left: 0;
+   right: 0;
+   z-index: 505;
+   margin: 0 .2rem;
+   padding-bottom: .5rem;
+   background: #fff;
+   border: .01rem solid #e8e8e8;
+   -webkit-box-shadow: #dadada 0px 0px 20px;
+   -moz-box-shadow: #dadada 0px 0px 20px;
+   box-shadow: #dadada 0px 0px 20px;background: #fff;behavior: url(/PIE.htc);
+   dt,dd{
+      font: .14rem/.44rem "";
+      padding-left: .2rem;
+   }
+   dt a{ color: #587b9b;}
+   dd{
+      color:#808080;
+      border-top: .01rem solid #e5e5e5;
+      i{
+         margin-right: .2rem;
+      }
+   }
+}

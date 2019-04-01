@@ -5,6 +5,7 @@
   "dependencies": {
     "antd-mobile": "^2.2.11",
     "axios": "^0.18.0",
+    "better-scroll": "^1.15.1",
     "customize-cra": "^0.2.12",
     "install": "^0.12.2",
     "moment": "^2.24.0",

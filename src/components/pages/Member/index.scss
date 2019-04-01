@@ -1,7 +1,9 @@
 .app-member{
-    padding: 0 .2rem;
     padding-top: 1.2rem;
-    .member-img img{ margin: 0 auto 2.64rem; }
+    .member-img {
+        padding: 0 .2rem;
+    }
+    img{ margin: 0 auto 2.64rem; }
 }
 .login-con{
     padding: 0 .2rem;

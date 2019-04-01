@@ -10,9 +10,10 @@ class BannerRoot extends React.Component {
         let url = "http://localhost:3000/banner"
         axios.get(url)
                 .then(res=>{
-                    for(let i=0;i<res.data.banners.length;i++){
-                        this.state.todo.push(res.data.banners[i])
-                    }  
+                   this.setState({
+                        todo:res.data.banners
+                   })
+                    
                 })
     }
     render() {

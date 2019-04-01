@@ -6,16 +6,16 @@ class SelectedBanner extends React.Component {
       imgHeight: 176,
     }
     componentDidMount() {
-      // simulate img loading
       setTimeout(() => {
         this.setState({
-          data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
+          data:this.props.selected
         });
       }, 100);
     }
     render() {
-      let {selected} = this.props
+      // let {selected} = this.props
       // console.log(selected)  
+      let {data} = this.state
       return (
         <WingBlank>
           <Carousel className="space-carousel"
@@ -27,7 +27,7 @@ class SelectedBanner extends React.Component {
             beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
             afterChange={index => this.setState({ slideIndex: index })}
           >
-            {selected.map((val, index) => (
+            {data.map((val, index) => (
               <a
                 key={val}
                 href="javascript:;"

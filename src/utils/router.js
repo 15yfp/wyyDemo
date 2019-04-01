@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router , Route,Switch}  from 'react-router-dom'
 import MainContaier from '../components/MainContaier/index'
-import { Search, Member, Login, Register } from '../components/pages/index'
-import ThisSong from '../components/pages/Mine/ThisSong/thisSong'
-import RecPlayed from '../components/pages/Mine/RecentlyPlayed/recPlayed'
-import DownManage from '../components/pages/Mine/downManage/dowmManage'
-import MyFm from '../components/pages/Mine/myFm/myFm'
-import MyCollect from '../components/pages/Mine/mycollect/mycollect'
+import { 
+  Search,
+  Member, 
+  Login, 
+  Register, 
+  PlayMusic, 
+  ThisSong, 
+  RecPlayed,
+  DownManage,
+  MyFm,
+  Searchlist,
+  Singer,
+  MyCollect
+} from '../components/pages/index'
 
 
 //tdq 路由
@@ -46,6 +54,9 @@ MyappRouter.defaultProps = {
     { id: 3, path: '/member', component: Member },
     { id: 4, path: '/login', component: Login },
     { id: 5, path: '/register', component: Register },
+    {id: 6,path: '/playMusic/:id',component: PlayMusic},
+    {id: 7,path: '/songlist',component: Searchlist,query: true},
+    {id: 8,path: '/singer',component: Singer},
     { id: 50, path: '/thissong', component: ThisSong },
     { id: 51, path: '/recplayed', component: RecPlayed },
     { id: 52, path: '/downmanage', component: DownManage },
@@ -53,8 +64,9 @@ MyappRouter.defaultProps = {
     { id: 54, path: '/mycollect', component: MyCollect },
     {id:100,path:'/simiMv/:id',component:SimiMv},
     {id:101,path:'/mvInfo/:id',component:MvContent},
+    
 
 
   ]
 }
-export default withRouter(MyappRouter);
+export default MyappRouter ;

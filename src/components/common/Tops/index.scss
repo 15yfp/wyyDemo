@@ -1,0 +1,17 @@
+.m-top{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .4rem;
+    z-index: 500;
+    background: #fff;
+    padding: 0 .2rem;
+    font: .14rem/.4rem "";
+    i{
+        margin-right: .15rem;
+        font-size: .22rem;
+        vertical-align: middle;
+    }
+}
