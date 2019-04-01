@@ -1,10 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react'
-<<<<<<< HEAD
 import Tops from '../../common/Tops'
-=======
 import axios from 'axios'
->>>>>>> af0909a366cc26690434591a8c5ebe47fe903161
 export default class Login extends Component {
   constructor(props) {
     super(props)
@@ -48,40 +45,21 @@ export default class Login extends Component {
   render() {
     let { go } = this.props.history
     return (
-<<<<<<< HEAD
-      <div> 
-          <Tops tit={"手机号登录"}/>
-          <div className="login-con"> 
-              <ul className="m-container">
-                  <li>
-                    <span>+86</span>
-                    <input type="text" placeholder="请输入手机号"/>
-                  </li>
-                  <li>
-                    <input type="password" placeholder="请输入密码"/>
-                    <i>忘记密码?</i>
-                  </li>
-              </ul>
-              <a to="/login" className="logBtn">手机登录</a>
-          </div>
-=======
-      <div className="login-con">
-        <div className="m-top">
-          <i className="iconfont icon-fanhui" onClick={() => go(-1)}></i>
-          <span>手机号登录</span>
+      <div>
+        <Tops tit={"手机号登录"}/>
+        <div className="login-con">
+          <ul className="m-container">
+            <li>
+              <span>+86</span>
+              <input type="text" placeholder="请输入手机号" onChange={this.username.bind(this)} value={this.state.username} />
+            </li>
+            <li>
+              <input type="password" placeholder="请输入密码" onChange={this.password.bind(this)} value={this.state.password} />
+              <i>忘记密码?</i>
+            </li>
+          </ul>
+          <a to="/login" className="logBtn" onClick={this.Login.bind(this)}>手机登录</a>
         </div>
-        <ul className="m-container">
-          <li>
-            <span>+86</span>
-            <input type="text" placeholder="请输入手机号" onChange={this.username.bind(this)} value={this.state.username} />
-          </li>
-          <li>
-            <input type="password" placeholder="请输入密码" onChange={this.password.bind(this)} value={this.state.password} />
-            <i>忘记密码?</i>
-          </li>
-        </ul>
-        <a to="/login" className="logBtn" onClick={this.Login.bind(this)}>手机登录</a>
->>>>>>> af0909a366cc26690434591a8c5ebe47fe903161
       </div>
     )
   }

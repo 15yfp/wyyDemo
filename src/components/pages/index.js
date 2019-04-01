@@ -14,7 +14,8 @@ import DownManage from './Mine/downManage/dowmManage'
 import MyFm from './Mine/myFm/myFm'
 import Searchlist from './Search/Searchlist'
 import Singer from './Singer'
+import MyCollect from './Mine/mycollect/mycollect'
 export {
     Mine, Find, Friends, Video, ModalCont, Search, Member, Login, Register, PlayMusic, ThisSong, RecPlayed,
-    DownManage, MyFm, Searchlist, Singer
+    DownManage, MyFm, Searchlist, Singer, MyCollect
 }

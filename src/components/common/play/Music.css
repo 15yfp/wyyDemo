@@ -40,7 +40,7 @@ html,body{
 .music_center {
     position:relative;
     overflow: hidden;
-    min-height: 4.65rem;
+    min-height: 2.8rem;
 }
 .music_Record{
     width:1rem;
@@ -124,6 +124,24 @@ html,body{
 .play_ul li:nth-child(3) i{
     margin-top: -0.2rem;
     font-size: 0.55rem;
+}
+.ul_div{
+    height: 1.8rem;
+    overflow: hidden;
+}
+.ul_lrc li {
+    width: 350px;
+    margin: 0 auto;
+    text-align:center;
+}
+.ul_lrc li{
+    color:#a4a4a9;
+}
+.ul_lrc .on {
+    color:#fff;
+    transition: all 1s;
+    font-size:18px;
+    font-weight:700;
 }
 @keyframes circleRoate{  
     from{transform: rotate(0deg);}  
