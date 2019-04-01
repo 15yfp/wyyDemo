@@ -13,7 +13,8 @@ class RecommendSong extends Component {
     componentDidMount(){
         const _this=this
         axios.get('http://localhost:3000/personalized').then(
-            function(res){              
+            function(res){       
+                    
                _this.setState({
                    arr:res.data.result.slice(0,6)
                })              

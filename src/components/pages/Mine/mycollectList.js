@@ -2,25 +2,29 @@ import React, { Component } from "react"
 import { Icon } from 'antd-mobile';
 import './mysongList.css'
 import axios from 'axios'
-class MysongList extends Component {
+class MyCollectList extends Component {
     constructor() {
         super()
         this.state = {
             isChange: true,
-            createdPlaylistCount: 0,
+            subPlaylistCount:0,
         }
     }
-    componentDidMount() {
-        let _this = this
+    componentDidMount(){
+        let _this=this
         axios.get('http://localhost:3000/user/subcount').then(
-            res => {
-                console.log(res.data, 1232142)
+            res=>{
+                console.log(res.data,1232142)
                 _this.setState({
-                    createdPlaylistCount: res.data.createdPlaylistCount
+                    subPlaylistCount:res.data.subPlaylistCount
                 })
             }
         )
     }
+
+
+
+
     change() {
         this.setState({
             isChange: !this.state.isChange
@@ -30,35 +34,38 @@ class MysongList extends Component {
         return (
             <div className="songList">
                 <div className="listHeader" onClick={this.change.bind(this)}>
-                    <span className="right" >
+                    <span className="right" onClick={this.change.bind(this)}>
                         {this.state.isChange ? <Icon type="right" /> : <Icon type='down' />}
                     </span>
-                    <span className="addlist"><b>创建的歌单</b> <i>({this.state.createdPlaylistCount})</i></span>
+                    <span className="addlist"><b>收藏的歌单</b> <i>({this.state.subPlaylistCount})</i></span>
                 </div>
-                {this.state.isChange ? ' ' : <List createdPlaylistCount={this.state.createdPlaylistCount} />}
+                {this.state.isChange? ' '  : <List subPlaylistCount={this.state.subPlaylistCount}/>}
+
             </div>
 
         )
     }
 }
-
 class List extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
-            id: '',
-            songList: []
+            id:'',
+            songList:[]
         }
     }
+
     componentDidMount() {
-        console.log(this.props)
+        console.log(this.props.subPlaylistCount)
+        let num=-this.props.subPlaylistCount
+        console.log(num)
         let id = localStorage.getItem('id')
         let _this = this
         axios.get('http://localhost:3000/user/playlist?uid=' + id).then(
             res => {
                 console.log(res.data.playlist)
                 _this.setState({
-                    songList: res.data.playlist.slice(0, 1)
+                    songList: res.data.playlist.slice(num)
                 })
             }
         )
@@ -73,17 +80,15 @@ class List extends Component {
                             <div className='listPic'><img src={item.coverImgUrl} alt="" /></div>
                             <div className='listTitle'>
                                 <h1>&nbsp;&nbsp;{item.name}</h1>
-                                <h2>&nbsp;&nbsp;{item.trackCount}首</h2>
+                                <h2>&nbsp;&nbsp;{item.trackCount}首 by {item.creator.nickname}</h2>
                             </div>
                         </div>
                     )
                 })}
             </div>
-
         )
     }
 }
 
 
-
-export default MysongList
+export default MyCollectList

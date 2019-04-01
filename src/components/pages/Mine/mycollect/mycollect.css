@@ -1,0 +1,169 @@
+.mycollectAll{
+    overflow: hidden;
+    min-height: 600px;
+    /* display:none; */
+    padding: 0 10px;
+}
+.mycollectAll-header{
+    padding: 10px 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 25px;
+}
+.mycollectAll-title{
+    display: block;
+    height: 22px;
+    float: left;
+    font-size: 17px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+.mycollectAll-icon-left{
+    float: left;
+}
+.mycollectAll-icon-search{
+    display: block;
+    float: right;
+}
+
+.mycollectAll-item{
+    display: flex; 
+    alignItems: center;
+    justifyContent: center; 
+    height: 400px; 
+    backgroundColor: #fff;
+}
+.myAlubm{
+    width: 100%;
+}
+.myNumAlubm{
+    height: 60px;
+    width: 100%;
+}
+.myAlubmPic{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.myBackPic{
+    background:url('../style/album.png') no-repeat center;
+    background-size: 60px;
+}
+.myAlubmPic img{
+    display: block;
+    width: 100%;
+}
+.myAlubmTitle{
+    float: left;
+    width: 75%;
+    height: 60px;
+    line-height: 60px;
+}
+.myAlubmTitle h1{
+    font-size: 18px;
+}
+.myCollAlubmHeader{
+    height: 30px;
+    width: 100%;
+    font-size: 16px;
+}
+.myCollAlubmHeader i{
+    font-size: 14px;
+    color:rgb(39, 39, 39);
+}
+.myCollAlubm{
+    margin-top:5px;
+    height: 60px;
+}
+.myAlubmTitle h2{
+    height: 35px;
+    line-height: 45px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+.myAlubmTitle h3{
+    height: 25p;
+    line-height: 15px;
+    font-size: 12px;
+}
+.myCollAlubmRight{
+    float: right;
+    height: 60px;
+    width: 10px;
+    background:url(../style/ddd.png) no-repeat center;
+    background-size: 20px;
+}
+.mySinger{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.mySingerPic{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.mySingerPic img{
+    display: block;
+    width: 100%;
+}
+.mySingerList{
+    float: left;
+    height: 60px;
+    width: 75%;
+}
+.mySingerList h1{
+    font-size: 16px;
+    height: 35px;
+    line-height: 45px;
+}
+.mySingerList h2{
+    font-size: 10px;
+    color: rgb(139, 139, 139);
+    height: 25px;
+    line-height: 15px;
+}
+.MvList{
+    width: 100%;
+    height: 70px;  
+    margin-bottom: 5px; 
+}
+.MvListPic{
+    float: left;
+    width: 120px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 5px;
+    position: relative;
+}
+.MvListPic img{
+    display: block;
+    width: 100%;
+    height: 90%;
+}
+.MvListTitle{
+    padding: 5px 0;
+    float: left;
+    width: 60%;
+    height: 60px;
+    justify-content: space-around;
+}
+.MvListTitle h2{
+    color:rgb(141, 141, 141);
+    font-size: 12px;
+}
+.playNum{
+    position: absolute;
+    text-indent: 5px;
+    font-size: 10px;
+    top:0;
+    background: url(../style/play.png) no-repeat left top;
+    background-size: 15px;
+    right: 2px;
+    color:#fff;
+}

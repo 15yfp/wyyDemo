@@ -1,11 +1,30 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Link, Route } from "react-router-dom"
-
+import axios from 'axios'
 import './programa.css'
-class Programa extends Component {
 
-    
+class Programa extends Component {
+    constructor(){
+        super()
+        this.state={
+            djRadioCount:0,
+            mycollect:0
+        }
+    }
+    componentDidMount(){
+        let _this=this
+        axios.get('http://localhost:3000/user/subcount').then(
+            res=>{
+                console.log(res.data,1232142)
+                _this.setState({
+                    djRadioCount:res.data.djRadioCount,
+                    mycollect:res.data.artistCount 
+                })
+            }
+        )
+    }
     render() {
+        console.log(this.state.djRadioCount)
         return (
            
             <div className="programa">
@@ -26,12 +45,12 @@ class Programa extends Component {
                 </div>
                 <div className="programaItem">
                     <div className="proaramaItemsp"><span className="iconfont">&#xe506;</span></div>
-                    <Link to="/myfm"><div className="proaramaItems myfm"> &nbsp;我的电台 <i>(0)</i></div></Link>
+                    <Link to="/myfm"><div className="proaramaItems myfm"> &nbsp;我的电台 <i>({this.state.djRadioCount})</i></div></Link>
                     
                 </div>
                 <div className="programaItem" >
                     <div className="proaramaItemsp"><span className="iconfont">&#xe639;</span></div>
-                    <Link to="/myfm"><div className="proaramaItems mycollect">我的收藏 <i>(专辑/歌手/视频/专栏)</i></div></Link>
+                    <Link to="/mycollect"><div className="proaramaItems mycollect">我的收藏 <i>(歌手/专辑/视频)</i></div></Link>
                 </div>
 
             </div>
