@@ -1,0 +1,75 @@
+.downPlayed{
+    clear: both;
+    height: 400px;
+    width:100%;
+   
+}
+.downPlayedTitle{
+    font-size: 16px;
+    height: 40px;
+   
+    line-height: 40px;
+}
+.downPlayAll{
+    text-indent: 32px;
+    width: 80%;
+    float: left;
+    background: url(../style/played.png) no-repeat left center;
+    background-size: 20px;
+    height: 40px;
+}
+.downPlayAdd{
+    text-indent: 22px;
+    width: 20%;
+    background: url(../style/addall.png) no-repeat left center;
+    background-size: 18px;
+    float: left;
+    height:40px;
+}
+.playnum{
+    color:rgb(150, 150, 150);
+    font-size: 14px;
+}
+.downPlayedList{
+    height: 50px;
+    width:100%;
+    background:#ccc;
+}
+.downPlayName{
+    width: 80%;
+    float: left;
+    height: 50px;
+}
+.downPlayNameright{
+    width: 70px;
+    height: 50px;
+    float: left;
+}
+.downPlayName h1{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.downPlayName h2{
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+}
+.downPlayrightVideo{
+    width: 35px;
+    height: 50px;
+    background: url(../style/playvideo.png) no-repeat left center;
+    background-size: 18px;
+    float: left;
+}
+.downPlayrightAdd{
+    width: 35px;
+    height: 50px;
+    background: url(../style/ddd.png) no-repeat left center;
+    background-size: 18px;
+    float: left;
+
+}

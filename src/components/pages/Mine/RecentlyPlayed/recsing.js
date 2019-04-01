@@ -3,8 +3,8 @@ import './recsing.css'
 export default class Recing extends Component {
   render() {
     return (
-      <div>
-          <div className="recsingPlayed">
+      <div className="recsingPlayed">
+          <div>
               <div className="recsingPlayedTitle">
                 <div className='recsingPlayAll'>播放全部<i className="playnum">共(0)首</i></div>
                 <div className='recsingPlayAdd'>多选</div>

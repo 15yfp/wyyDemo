@@ -8,8 +8,7 @@ import MvContent from './mvInfo/mvInfo';
 const tabs = [
     { title: <Badge >推荐</Badge> },
     { title: <Badge >段子</Badge> },
-    { title: <Badge >Third Tab</Badge> },
-    { title: <Badge >Forth Tab</Badge> },
+   
 
 ];
 

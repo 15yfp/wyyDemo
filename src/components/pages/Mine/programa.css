@@ -12,17 +12,18 @@
 .proaramaItemsp,.proaramaItems{
     float: left;
 }
+
 .proaramaItemsp span{
     margin-left: 10px;
     display:block;
     text-align: center;
     line-height: 43px;
     font-size: 20px;
-    width:43px;
+    width:20%;
     height: 43px;
 }
 .mymusic,.mypaly,.mydown,.myfm{
-    width:322px;
+    width:90%;
     height: 42px;
     border-bottom: 1px solid #ccc;   
 }

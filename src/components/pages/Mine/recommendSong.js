@@ -3,7 +3,6 @@ import axios from 'axios'
 
 
 import './recommendSong.css'
-import { map } from "rsvp";
 class RecommendSong extends Component {
     constructor(props){
         super()
@@ -14,15 +13,13 @@ class RecommendSong extends Component {
     componentDidMount(){
         const _this=this
         axios.get('http://localhost:3000/personalized').then(
-            function(res){
-               
+            function(res){       
+                    
                _this.setState({
                    arr:res.data.result.slice(0,6)
-               })
-              
+               })              
             }
-        )
-        
+        ) 
     }
     render() {
         
@@ -31,16 +28,19 @@ class RecommendSong extends Component {
                 <div className="SongTitle">
                     <span className="img"></span><span className="title">推荐歌单</span>
                 </div>
-                {this.state.arr.map((item,i)=>{
+                <div className='gedan'>
+                    {this.state.arr.map((item,i)=>{
                     return (
                         <div className="songAll" key={i}> 
                             <div className="songCover"> 
-                            <img className="pic" src={item.picUrl}/>
+                            <img className="pic" src={item.picUrl} alt='{item.name}'/>
                                 </div>
-                            <h1>{item.name}</h1>
+                            <h1 className="recomSongh1">{item.name}</h1>
                         </div>
                     )
                 })}
+                </div>
+                
                 
                 
             </div>

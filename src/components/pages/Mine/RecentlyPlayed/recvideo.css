@@ -1,0 +1,36 @@
+.recvideoAll{
+    width: 100%;
+}
+.recvideoList{
+    width: 100%;
+    margin: 0  auto;
+    height: 60px;
+}
+.recvideoPic{
+    float: left;
+    height: 60px;
+    width: 60px;
+    background:blue;
+}
+.recvideoType{
+    float: left;
+    height: 60px;
+    width:80%;
+    background: #ccc;
+}
+.recvideoType h1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+
+}
+.recvideoTypes{
+    height: 25px;
+    line-height: 25px;
+    font-size: 10px;
+}
+.recvideoDate{
+    float: right;
+}

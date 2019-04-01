@@ -3,8 +3,8 @@ import './tabAll.css'
 export default class Singer extends Component {
   render() {
     return (
-      <div>
-          <div className="tabAll">
+      <div className="tabAll">
+          <div>
               <div className="tabAllNone"></div>
               <h1>暂无本地音乐</h1>
               <h2><span className="tabAllSweep">一键扫描</span></h2>
