@@ -8,6 +8,7 @@
     "better-scroll": "^1.15.1",
     "customize-cra": "^0.2.12",
     "install": "^0.12.2",
+    "moment": "^2.24.0",
     "node-sass": "^4.11.0",
     "npm": "^6.9.0",
     "react": "^16.8.5",
