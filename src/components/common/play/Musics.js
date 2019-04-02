@@ -1,7 +1,7 @@
 import React from "react"
 import "./Music.css"
 import Axios from "axios";
-import { withRouter } from "react-router-dom"
+var timer;
 class Musics extends React.Component {
     constructor(props) {
         super(props)
@@ -15,18 +15,19 @@ class Musics extends React.Component {
             //获取歌曲图片
             songLyric: [],
             //获取歌曲时间
-            songTime:[],
+            songTime: [],
         }
-        //进度条方法
-        this.ProgressBar = this.ProgressBar.bind(this)
     }
     componentDidMount() {
+        console.log(123)
         //获取歌曲url
         Axios.get(`http://localhost:3000/song/url?id=${this.props.location.state.uid}`)
             .then(res => {
+
                 this.setState({
-                    songs: res.data.data[0]
+                    songs: (res.data.data[0])
                 })
+                console.log(this.state.songs)
             })
         //获取歌曲详情
         Axios.get(`http://localhost:3000/song/detail?ids=${this.props.location.state.uid}`)
@@ -34,9 +35,9 @@ class Musics extends React.Component {
                 this.setState({
                     songsname: res.data.songs[0],
                     songsname_al: res.data.songs[0].al
-                    
+
                 })
-                console.log(this.state.songsname)
+                // console.log(this.state.songsname)
             })
         //获取歌曲的歌词
         Axios.get(`http://localhost:3000/lyric?id=${this.props.location.state.uid}`)
@@ -85,28 +86,43 @@ class Musics extends React.Component {
                 // 时间改变时间
                 this.refs.audio_ref.ontimeupdate = () => {
                     //监听当前播放的时间
-                    currentTime = this.refs.audio_ref.currentTime;
-                    // console.log(currentTime);
+                    // console.log(this.refs.audio_ref.currentTime)
+                    currentTime = !this.refs.audio_ref.currentTime ? 0 : this.refs.audio_ref.currentTime;
+                    console.log(currentTime);
                     //让J等于播放的具体句数 当J小于时间戳数组的长度
                     for (let j = currentLine; j < lrcTime.length; j++) {
                         //如果当前播放时间小于 时间戳的行数 并且 当前播放时间大于时间戳
                         if (currentTime < lrcTime[j + 1] && currentTime > lrcTime[j]) {
                             //让播放到指定歌词的值等于j值
                             currentLine = j;
-                            // console.log(j)
-                            ppxx = 1-(currentLine * 0.20);
+                            ppxx = 1 - (currentLine * 0.20);
                             ul.style.transform = "translateY(" + ppxx + "rem)";
-                            oLis[currentLine - 1].className = "";
-                            oLis[currentLine].className = "on";
-                            break;
+                            if (currentLine == 0) {
+                                continue;
+                            } else {
+                                oLis[currentLine - 1].style.color = "";
+                                oLis[currentLine].style.color = "#fff";
+                                break;
+                            }
                         }
                     }
-                    this.ProgressBar()
+                    //1,获取当前歌曲的长度
+                    let songLength = this.refs.audio_ref.duration;
+                     //3,获取当前歌曲播放时间
+                    let cur = this.refs.audio_ref.currentTime;
+                    //2,设置一个定时器
+                    //4,div的宽度跟着播放时间递增
+                    console.log(this.refs.Progress)
+                    this.refs.Progress.style.width = "" + parseFloat(cur / songLength) * 2.86 + "rem";
+                    this.songTime()
                 }
-            }) 
+            })
     }
     goback() {
-        this.props.history.go(-1)
+        this.refs.audio_ref.pause();
+        this.props.history.go(-1);
+        // let uid = localStorage.getItem("uid")
+        // this.props.history.push(`/playMusic/id=${uid}`)
     }
     //播放暂停功能,停止图片旋转,切换播放停止图标
     playMusic(e) {
@@ -116,30 +132,46 @@ class Musics extends React.Component {
             this.refs.audio_ref.pause();
             e.currentTarget.className = "iconfont icon-bofang"
             this.refs.img_auto.className = "music_back"
+            clearInterval(timer)
         } else if (e.currentTarget.className === "iconfont icon-bofang") {
             //播放
             this.refs.audio_ref.play();
             e.currentTarget.className = "iconfont icon-weibiaoti--"
             this.refs.img_auto.className = "music_back autoplay"
-            console.log(this.ProgressBar())
         }
     }
-    //进度条功能
-    ProgressBar() {
-        let Progress = document.getElementById("Progress")
-        let audio = document.getElementById("audio")
-        //1,获取当前歌曲的长度
-        let songLength = audio.duration;
-        //2,设置一个定时器
-        let timer = setInterval(() => {
-            //3,获取当前歌曲播放时间
-            let cur = audio.currentTime;
-            //4,div的宽度跟着播放时间递增
-            Progress.style.width = "" + parseFloat(cur / songLength) * 2.86 + "rem";
-        }, 1000);
+    //歌曲时间显示
+    songTime() {
+        // 获取歌曲当前总时间
+        let songLength = this.refs.audio_ref.duration
+        //分
+        let m = Math.floor(songLength / 60)
+        //秒
+        let s = Math.floor(songLength % 60)
+        // 显示总时间
+        this.refs.songTime.innerHTML = m + ":" + s
+        if (s < 10) {
+            s = "0" + s;
+        }
+        let cur = parseInt(this.refs.audio_ref.currentTime);
+        let mi = parseInt(cur / 60)
+        if (cur % 60 < 10) {
+            this.refs.songStime.innerHTML = "" + mi + ":" + "0" + cur % 60 + ""
+        } else {
+            this.refs.songStime.innerHTML = "" + mi + ":" + cur % 60 + ""
+        }
+    }
+    //上一曲功能
+    songUp() {
+        console.log("上一曲")
+    }
+    //下一曲功能
+    songDown() {
+        console.log("下一曲")
     }
     render() {
         let { songsname, songsname_al, songs } = this.state
+        console.log(songs)
         return (
             <div className="music_root">
                 <div className="music_top">
@@ -181,11 +213,11 @@ class Musics extends React.Component {
                         </li>
                     </ul>
                     <div className="Progress_bar">
-                        <span className="float">3:00</span>
+                        <span className="float song_width" ref="songStime"></span>
                         <div className="float Progress">
-                            <div className="progress_son" id="Progress"></div>
+                            <div className="progress_son" ref="Progress"></div>
                         </div>
-                        <span className="float">4:00</span>
+                        <span className="float song_width" ref="songTime"></span>
                     </div>
                     <div className=""></div>
                     <ul className="play_ul">
@@ -193,13 +225,13 @@ class Musics extends React.Component {
                             <i className="iconfont icon-suiji"></i>
                         </li>
                         <li >
-                            <i className="iconfont icon-shangyishoushangyige"></i>
+                            <i className="iconfont icon-shangyishoushangyige" onClick={this.songUp.bind(this)}></i>
                         </li>
                         <li >
                             <i className="iconfont icon-weibiaoti--" id="off" onClick={this.playMusic.bind(this)}></i>
                         </li>
                         <li >
-                            <i className="iconfont icon-xiayigexiayishou"></i>
+                            <i className="iconfont icon-xiayigexiayishou" onClick={this.songDown.bind(this)}></i>
                         </li>
                         <li >
                             <i className="iconfont icon-liebiaoshunxu"></i>

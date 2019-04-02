@@ -49,12 +49,12 @@ export default class Search extends Component {
     if( searchAdvise.length !== 0 ){
       return (
         <dl className="app-search-model">
-          <dt><Link to={{pathname : '/songlist', search: `?keyword=${searchAdvise[0].keyword}` }}>搜索"{searchAdvise[0].keyword}"</Link></dt>
+          <dt><Link to={{pathname : '/songlist', search: `?keyword=${searchAdvise[0].keyword}`,query: {word: searchAdvise[0].keyword } }}>搜索"{searchAdvise[0].keyword}"</Link></dt>
           {
              searchAdvise.map((item,index) => {
                   return (
                       <dd key={index}  onClick={this.handler.bind(this,item)}>
-                        <Link to={{pathname : '/songlist', search: `?keyword=${item.keyword}` }}>
+                        <Link to={{pathname : '/songlist', search: `?keyword=${item.keyword}`,query: {word: item.keyword } }}>
                             <i className="iconfont icon-2fangdajing"></i>{item.keyword}
                         </Link>
                       </dd>

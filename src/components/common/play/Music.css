@@ -100,8 +100,8 @@ html,body{
 .Progress {
     width:2.88rem;
     border:1px solid #a4a4a9;
-    margin-left:5px;
-    margin-right:6px;
+    margin-left: 17px;
+    margin-right: 2px;
 }
 .progress_son{
     width:0;
@@ -142,6 +142,9 @@ html,body{
     transition: all 1s;
     font-size:18px;
     font-weight:700;
+}
+.song_width{
+    width:20.25px;
 }
 @keyframes circleRoate{  
     from{transform: rotate(0deg);}  
